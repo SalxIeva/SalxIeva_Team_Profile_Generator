@@ -84,26 +84,51 @@ startGenerator();
 // create a engineer function
 function createEngineer() {
     // prompt for engineer details
+    // add validator
     inquirer.prompt([
         {
             type: "input",
             name: "name",
-            message: "What is the engineer's name?"
+            message: "What is the engineer's name?",
+            validate: answer => {
+                if (answer.match(/^[a-zA-Z ]+$/)) {
+                    return true;
+                }
+                return "Please enter a valid name (only letters and spaces).";
+            }
         },
         {
             type: "input",
             name: "id",
-            message: "What is the engineer's ID?"
+            message: "What is the engineer's ID?",
+            validate: answer => {
+                if (answer.match(/^[1-9]\d*$/)) {
+                    return true;
+                }
+                return "Please enter a positive number.";
+            }
         },
         {
             type: "input",
             name: "email",
-            message: "What is the engineer's email?"
+            message: "What is the engineer's email?",
+            validate: answer => {
+                if (answer.match(/\S+@\S+\.\S+/)) {
+                    return true;
+                }
+                return "Please enter a valid email address.";
+            }
         },
         {
             type: "input",
             name: "github",
-            message: "What is the engineer's gitHub username?"
+            message: "What is the engineer's gitHub username?",
+            validate: answer => {
+                if (answer.length < 1) {
+                    return "Please enter a GitHub username.";
+                }
+                return true;
+            }
         }
         // add the engineer to the team array
     ]).then(answers => {
@@ -117,26 +142,51 @@ function createEngineer() {
 // create an intern function
 function createIntern() {
     // prompt for intern details
+    // add validator
     inquirer.prompt([
         {
             type: "input",
             name: "name",
-            message: "What is the intern's name?"
+            message: "What is the intern's name?",
+            validate: answer => {
+                if (answer.match(/^[a-zA-Z ]+$/)) {
+                    return true;
+                }
+                return "Please enter a valid name (only letters and spaces).";
+            }
         },
         {
             type: "input",
             name: "id",
-            message: "What is the intern's ID?"
+            message: "What is the intern's ID?",
+            validate: answer => {
+                if (answer.match(/^[1-9]\d*$/)) {
+                    return true;
+                }
+                return "Please enter a positive number.";
+            }
         },
         {
             type: "input",
             name: "email",
-            message: "What is the intern's email?"
+            message: "What is the intern's email?",
+            validate: answer => {
+                if (answer.match(/\S+@\S+\.\S+/)) {
+                    return true;
+                }
+                return "Please enter a valid email address.";
+            }
         },
         {
             type: "input",
             name: "school",
-            message: "What is the intern's school?"
+            message: "What is the intern's school?",
+            validate: answer => {
+                if (answer.length < 1) {
+                    return "Please enter a school name.";
+                }
+                return true;
+            }
         }
         // add the intern to the team array
     ]).then(answers => {
