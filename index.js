@@ -88,9 +88,35 @@ function createEngineer() {
 
 }
 createEngineer();
-// create an intern function
-// function createIntern() {
-//     // prompt for intern details
-//     // add intern to the team array 
 
-// }
+// create an intern function
+function createIntern() {
+    // prompt for intern details
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is the intern's name?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is the intern's ID?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the intern's email?"
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "What is the intern's school?"
+        }
+        // add the intern to the team array
+    ]).then(answers => {
+        const intern = new Engineer(answers.name, answers.id, answers.email, answers.school);
+        teamMembers.push(intern);
+    });
+
+}
