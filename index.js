@@ -87,7 +87,7 @@ function createEngineer() {
     });
 
 }
-createEngineer();
+// createEngineer();
 
 // create an intern function
 function createIntern() {
@@ -115,8 +115,10 @@ function createIntern() {
         }
         // add the intern to the team array
     ]).then(answers => {
-        const intern = new Engineer(answers.name, answers.id, answers.email, answers.school);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         teamMembers.push(intern);
     });
 
 }
+
+// create add team members function, so that once manager is created it calls to add other team members, by selecting: engineer, intern or finish
