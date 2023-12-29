@@ -57,12 +57,37 @@ function createManager() {
 startGenerator();
 
 // create a engineer function
-// function createEngineer() {
-//     // prompt for engineer details
-//     // add the engineer to the team array
+function createEngineer() {
+    // prompt for engineer details
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is the engineer's name?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is the engineer's ID?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the engineer's email?"
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "What is the engineer's gitHub username?"
+        }
+        // add the engineer to the team array
+    ]).then(answers => {
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+        teamMembers.push(engineer);
+    });
 
-// }
-
+}
+createEngineer();
 // create an intern function
 // function createIntern() {
 //     // prompt for intern details
