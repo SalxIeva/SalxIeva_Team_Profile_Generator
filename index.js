@@ -25,26 +25,51 @@ function startGenerator() {
 // create a manager function
 function createManager() {
     // prompt for managers details
+    // add validator
     inquirer.prompt([
         {
             type: "input",
             name: "name",
-            message: "What is the manager's name?"
+            message: "What is the manager's name?",
+            validate: answer => {
+                if (answer.match(/^[a-zA-Z ]+$/)) {
+                    return true;
+                }
+                return "Please enter a valid name (only letters and spaces).";
+            }
         },
         {
             type: "input",
             name: "id",
-            message: "What is the manager's ID?"
+            message: "What is the manager's ID?",
+            validate: answer => {
+                if (answer.match(/^[1-9]\d*$/)) {
+                    return true;
+                }
+                return "Please enter a positive number.";
+            }
         },
         {
             type: "input",
             name: "email",
-            message: "What is the manager's email?"
+            message: "What is the manager's email?",
+            validate: answer => {
+                if (answer.match(/\S+@\S+\.\S+/)) {
+                    return true;
+                }
+                return "Please enter a valid email address.";
+            }
         },
         {
             type: "input",
             name: "officeNumber",
-            message: "What is the manager's office number?"
+            message: "What is the manager's office number?",
+            validate: answer => {
+                if (answer.match(/^[1-9]\d*$/)) {
+                    return true;
+                }
+                return "Please enter a positive number.";
+            }
         }
         // add the manager to the team array
     ]).then(answers => {
