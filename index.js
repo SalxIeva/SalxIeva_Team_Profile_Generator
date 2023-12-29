@@ -15,16 +15,28 @@ const render = require("./src/page-template.js");
 
 
 // create a manager function
-// prompt for managers details
-// add the manager to the team array
+function createManager() {
+    // prompt for managers details
+    // add the manager to the team array
+
+}
 
 // create a engineer function
-// prompt for engineer details
-// add the engineer to the team array
+function createEngineer() {
+    // prompt for engineer details
+    // add the engineer to the team array
+
+}
 
 // create an intern function
-// prompt for intern details
-// add intern to the team array 
+function createIntern() {
+    // prompt for intern details
+    // add intern to the team array 
+
+}
 
 // create a function to start generator by first prompting user for managers details
+function startGenerator() {
+    createManager();
+}
 //  add team members to the array
