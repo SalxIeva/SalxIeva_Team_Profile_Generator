@@ -25,7 +25,7 @@ function startGenerator() {
 // create a manager function
 function createManager() {
     // prompt for managers details
-    inquirer.createPromptModule([
+    inquirer.prompt([
         {
             type: "input",
             name: "name",
@@ -55,6 +55,7 @@ function createManager() {
 }
 
 startGenerator();
+
 // create a engineer function
 // function createEngineer() {
 //     // prompt for engineer details
