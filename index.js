@@ -78,7 +78,6 @@ function createManager() {
 
 }
 
-startGenerator();
 
 // create a engineer function
 function createEngineer() {
@@ -133,8 +132,9 @@ function createEngineer() {
     ]).then(answers => {
         const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         teamMembers.push(engineer);
+        addTeamMembers();
     });
-
+    
 }
 // createEngineer();
 
@@ -191,8 +191,9 @@ function createIntern() {
     ]).then(answers => {
         const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         teamMembers.push(intern);
+        addTeamMembers();
     });
-
+    
 }
 
 // create add team members function, so that once manager is created it calls to add other team members, by selecting: engineer, intern or finish
@@ -210,17 +211,18 @@ function addTeamMembers() {
             case "Engineer":
                 createEngineer();
                 break;
-            case "Intern":
-                createIntern();
-                break;
+                case "Intern":
+                    createIntern();
+                    break;
+                }
+            });
         }
-    });
-}
-
-// add function to build the team to create file and write html?
-function buildHTML() {
-    if (!fs.existsSync(OUTPUT_DIR)) {
-        fs.mkdirSync(OUTPUT_DIR);
-    }
-    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
-}
+        
+        // add function to build the team to create file and write html?
+        function buildHTML() {
+            if (!fs.existsSync(OUTPUT_DIR)) {
+                fs.mkdirSync(OUTPUT_DIR);
+            }
+            fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+        }
+        startGenerator();
