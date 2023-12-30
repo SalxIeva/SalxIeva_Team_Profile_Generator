@@ -206,5 +206,14 @@ function addTeamMembers() {
             message: "Which type of team member would you like to add?",
             choices: ["Engineer", "Intern", "I don't want to add any more team members."]
         }
-    ])
+    ]).then(answers => {
+        switch (answers.memberChoice) {
+            case "Engineer":
+                createEngineer();
+                break;
+            case "Intern":
+                createIntern();
+                break;
+        }
+    })
 }
