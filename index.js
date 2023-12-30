@@ -214,6 +214,8 @@ function addTeamMembers() {
                 case "Intern":
                     createIntern();
                     break;
+                default:
+                    buildHTML();
                 }
             });
         }
