@@ -197,3 +197,14 @@ function createIntern() {
 }
 
 // create add team members function, so that once manager is created it calls to add other team members, by selecting: engineer, intern or finish
+
+function addTeamMembers() {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "memberChoice",
+            message: "Which type of team member would you like to add?",
+            choices: ["Engineer", "Intern", "I don't want to add any more team members."]
+        }
+    ])
+}
