@@ -74,6 +74,7 @@ function createManager() {
     ]).then(answers => {
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         teamMembers.push(manager);
+        addTeamMembers();
     });
 
 }
