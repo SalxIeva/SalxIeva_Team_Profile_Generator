@@ -1,0 +1,156 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+
+    <style>
+    .jumbotron {
+        background-color: navy;
+        color: white;
+    }
+    .card-header {
+        background-color: sandybrown;
+
+    }
+    .card {
+        box-shadow: 10px 5px 5px grey;
+        margin: 10px;
+
+    }
+    .team-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .employee-card {
+        flex: 1; 
+        margin: 10px; 
+        min-width: 280px; 
+        max-width: 280px; 
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .card-body {
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        padding: 35px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 team-heading">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="team-area col-12 d-flex flex wrap justify-content-center">
+                
+        <div class="card employee-card">
+        <div class="card-header">
+            <h2 class="card-title">ieva</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: 56</li>
+                <li class="list-group-item">Email: <a href="mailto:ieva@gmail.com">ieva@gmail.com</a></li>
+                <li class="list-group-item">Office number: 3</li>
+            </ul>
+        </div>
+    </div>
+        
+        <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Joe</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 87</li>
+            <li class="list-group-item">Email: <a href="mailto:joe@yahoo.com">joe@yahoo.com</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/Joeey76" target="_blank" rel="noopener noreferrer">Joeey76</a></li>
+        </ul>
+    </div>
+</div>
+        
+        <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Ben</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 76</li>
+            <li class="list-group-item">Email: <a href="mailto:ben.nacho@yahoo.com">ben.nacho@yahoo.com</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/Benny_Jo" target="_blank" rel="noopener noreferrer">Benny_Jo</a></li>
+        </ul>
+    </div>
+</div>
+        
+        <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Tony</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 23</li>
+            <li class="list-group-item">Email: <a href="mailto:tony.badger@yahoo.com">tony.badger@yahoo.com</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/T_Badger" target="_blank" rel="noopener noreferrer">T_Badger</a></li>
+        </ul>
+    </div>
+</div>
+        
+        <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Sunny</h2>
+        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 65</li>
+            <li class="list-group-item">Email: <a href="mailto:sunny.hopper@gmail.com">sunny.hopper@gmail.com</a></li>
+            <li class="list-group-item">School: CodeAcademy</li>
+        </ul>
+    </div>
+</div>
+        
+        <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Luke</h2>
+        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 90</li>
+            <li class="list-group-item">Email: <a href="mailto:luke.heman@gmail.com">luke.heman@gmail.com</a></li>
+            <li class="list-group-item">School: freeCodeCamp</li>
+        </ul>
+    </div>
+</div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
