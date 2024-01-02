@@ -1,6 +1,6 @@
 # SalxIeva_Team_Profile_Generator ![License](https://img.shields.io/badge/license-MIT-brightgreen) 
   
-## Screenshoot
+## Screenshot
 
 ![image](https://github.com/SalxIeva/SalxIeva_Team_Profile_Generator/assets/133906072/1c2f2204-af80-4637-9e38-0460690ecca6)
 
