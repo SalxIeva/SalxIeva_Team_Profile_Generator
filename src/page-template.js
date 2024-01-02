@@ -95,30 +95,43 @@ module.exports = team => {
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
+
     <style>
-        .jumbotron {
-            background-color: navy;
-            color: white;
-            /* border-radius: 10px; */
-        }
-        .card-title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card-header {
-            background-color: sandybrown;
+    .jumbotron {
+        background-color: navy;
+        color: white;
+    }
+    .card-header {
+        background-color: sandybrown;
 
-        }
-        .card-body {
-            display: flex;
-            flex-direction: column;
-        }
-        .card {
-            box-shadow: 10px 5px 5px grey;
-            margin: 10px;
+    }
+    .card {
+        box-shadow: 10px 5px 5px grey;
+        margin: 10px;
 
-        }
+    }
+    .team-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .employee-card {
+        flex: 1; 
+        margin: 10px; 
+        min-width: 280px; 
+        max-width: 280px; 
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .card-body {
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        padding: 35px;
+    }
 
     </style>
 </head>
@@ -127,13 +140,13 @@ module.exports = team => {
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center" style="background-color: bisque">My Team</h1>
+                <h1 class="text-center">My Team</h1>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="team-area col-12 d-flex flex wrap justify-content-center">
                 ${generateTeam(team)}
             </div>
         </div>
